@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-	<title>{title} - SvelteKitTemplate</title>
+	<title>{title} - Clever cropping</title>
 </svelte:head>
 
 <h1>{title}</h1>

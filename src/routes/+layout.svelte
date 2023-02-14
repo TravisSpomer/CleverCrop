@@ -14,6 +14,6 @@
 
 <footer>
 <p>
-	Template &copy; <Year from={2020} /> Travis Spomer.
+	&copy; <Year from={2023} /> Travis Spomer.
 </p>
 </footer>
