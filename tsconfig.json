@@ -1,0 +1,32 @@
+{
+	"extends": "./.svelte-kit/tsconfig.json",
+	"compileOnSave": false,
+	"compilerOptions": {
+		"allowJs": true,
+		"alwaysStrict": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"forceConsistentCasingInFileNames": true,
+		"importsNotUsedAsValues": "error",
+		"noEmit": true,
+		"noEmitOnError": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"removeComments": true,
+		"rootDir": "src",
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strictNullChecks": true
+	},
+	"include": [
+		"src/**/*.js",
+		"src/**/*.ts",
+		"src/**/*.svelte"
+	],
+	"exclude": [
+		"node_modules/**"
+	]
+}
