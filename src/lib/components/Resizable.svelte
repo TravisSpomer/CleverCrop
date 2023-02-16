@@ -2,8 +2,8 @@
 	import { draggable, isDraggableSupported, type DraggableEvent } from "../utils/draggable"
 
 	export let mode: "corners" | "crop" | "grip" = "corners" // Only "corners" is implemented
-	export let width = 300
-	export let height = 200
+	export let width: number
+	export let height: number
 
 	let dx: number | null = null
 	let dy: number | null = null
