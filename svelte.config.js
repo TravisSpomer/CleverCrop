@@ -1,5 +1,5 @@
 import sveltePreprocess from "svelte-preprocess"
-import adapterStatic from "@sveltejs/adapter-static"
+import adapterAzure from "svelte-adapter-azure-swa"
 
 /** @type {import('@sveltejs/kit').Config} */
 export default {
@@ -9,7 +9,7 @@ export default {
 	],
 
 	kit: {
-		adapter: adapterStatic(),
+		adapter: adapterAzure(),
 		paths: {
 			base: process.env.BASE_URL || "",
 		},

@@ -4,7 +4,6 @@
 	"private": true,
 	"license": "UNLICENSED",
 	"devDependencies": {
-		"@sveltejs/adapter-static": "^1.0.5",
 		"@sveltejs/kit": "^1.2.5",
 		"@types/html-minifier": "^4.0.2",
 		"@typescript-eslint/eslint-plugin": "^5.31.0",
@@ -14,6 +13,7 @@
 		"html-minifier": "^4.0.0",
 		"sass": "^1.54.0",
 		"svelte": "^3.55.1",
+		"svelte-adapter-azure-swa": "^0.13.0",
 		"svelte-preprocess": "^5.0.1",
 		"tslib": "^2.4.0",
 		"typescript": "^4.7.4"
