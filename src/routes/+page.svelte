@@ -24,7 +24,7 @@
 			isLoadingCustom = true
 			selectedSource = null
 
-			sources.push(await (await fetch("/api/v1/crop", {
+			sources.push(await (await fetch("/v1/crop", {
 				method: "POST",
 				body: JSON.stringify({ src: customUrl }),
 				headers: { "content-type": "application/json" }
