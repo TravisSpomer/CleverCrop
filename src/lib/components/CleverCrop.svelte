@@ -68,8 +68,6 @@
 		aspect-ratio: auto;
 
 		object-fit: cover;
-
-		border: 1px solid red;
 	}
 }
 

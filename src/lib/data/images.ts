@@ -1,6 +1,6 @@
 import type { Region } from "$lib/components/CleverCrop.svelte"
 
-interface SourceInfo
+export interface SourceInfo
 {
 	title: string,
 	src: string
@@ -11,7 +11,7 @@ interface SourceInfo
 
 export const defaultIndex = 2
 
-export const images: SourceInfo[] =
+export const images: ReadonlyArray<SourceInfo> =
 [
 	{
 		title: "Abstract green",
@@ -23,7 +23,7 @@ export const images: SourceInfo[] =
 		title: "Alleah",
 		src: "/images/photos/alleah.jpg",
 		width: 400, height: 600,
-		focusRegion: { left: 0.3, top: 0.4, width: 0.25, height: 0.1 },
+		focusRegion: { left: 0.3, top: 0.3, width: 0.25, height: 0.1 },
 	},
 	{
 		title: "Cherry blossoms",
@@ -41,13 +41,13 @@ export const images: SourceInfo[] =
 		title: "Herbert",
 		src: "/images/photos/herbert.jpg",
 		width: 600, height: 400,
-		focusRegion: { left: 0.4, top: 0.25, width: 0.2, height: 0.15 },
+		focusRegion: { left: 0.4, top: 0.3, width: 0.2, height: 0.15 },
 	},
 	{
 		title: "Javier",
 		src: "/images/photos/javier.jpg",
 		width: 440, height: 600,
-		focusRegion: { left: 0.3, top: 0.05, width: 0.2, height: 0.15 },
+		focusRegion: { left: 0.2, top: 0.1, width: 0.2, height: 0.15 },
 	},
 	{
 		title: "Lava",
