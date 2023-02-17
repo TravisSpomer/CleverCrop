@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from "svelte"
 	import { images, defaultIndex, type SourceInfo } from "$lib/data/images"
 	import ResizableCroppedImageDemo from "$lib/components/ResizableCroppedImageDemo.svelte"
 
@@ -38,6 +39,12 @@
 			isLoadingCustom = false
 		}
 	}
+
+	onMount(() =>
+	{
+		// Wake up the server when loading the page
+		fetch("/v1/hello")
+	})
 </script>
 
 <svelte:head>
