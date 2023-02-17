@@ -1,4 +1,5 @@
 import { json, error } from "@sveltejs/kit"
+import { env } from "$env/dynamic/private"
 
 /** @type {import("./$types").RequestHandler} */
 export async function POST({ fetch, request })
@@ -7,10 +8,10 @@ export async function POST({ fetch, request })
 	if (!src) throw error(400, "src is required")
 
 	// Call the Cognitive Services API and just pass along the URL.
-	const response = await fetch("https://travisvision.cognitiveservices.azure.com/computervision/imageanalysis:analyze?api-version=2022-10-12-preview&features=description,smartCrops&language=en&smartcrops-aspect-ratios=1", {
+	const response = await fetch(`https://${env.AZURE_COGNITIVE_SERVICES_NAME}.cognitiveservices.azure.com/computervision/imageanalysis:analyze?api-version=2022-10-12-preview&features=description,smartCrops&language=en&smartcrops-aspect-ratios=1`, {
 		method: "POST",
 		body: JSON.stringify({ url: src }),
-		headers: { "content-type": "application/json", "Ocp-Apim-Subscription-Key": "" }
+		headers: { "content-type": "application/json", "Ocp-Apim-Subscription-Key": env.AZURE_COGNITIVE_SERVICES_KEY }
 	})
 
 	const data = await response.json()
