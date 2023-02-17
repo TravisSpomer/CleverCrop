@@ -68,6 +68,7 @@
 		aspect-ratio: auto;
 
 		object-fit: cover;
+		transition: object-position 125ms ease-out 0s;
 	}
 }
 

@@ -8,6 +8,7 @@
 	let sourceIndex: number = defaultIndex
 	let customUrl: string
 	let isLoadingCustom: boolean = false
+	let clever: boolean = false
 
 	$: if (sourceIndex >= 0)
 	{
@@ -59,6 +60,7 @@
 		<option value={i}>{source.title}</option>
 	{/each}
 </select>
+<label><input type="checkbox" bind:checked={clever}>Clever</label>
 
 {#if isLoadingCustom}
 	<div>Azure Cognitive Services is analyzing that image...</div>
@@ -67,7 +69,7 @@
 	<ResizableCroppedImageDemo
 		src={selectedSource.src}
 		width={selectedSource.width} height={selectedSource.height}
-		focusRegion={selectedSource.focusRegion}
+		focusRegion={clever ? selectedSource.focusRegion : undefined}
 	/>
 {:else}
 	<div>

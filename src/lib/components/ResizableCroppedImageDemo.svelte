@@ -8,7 +8,7 @@
 	export let src: string
 	export let width: number
 	export let height: number
-	export let focusRegion: Region
+	export let focusRegion: Region | undefined
 </script>
 
 <style lang="scss">
@@ -35,7 +35,7 @@
 <Resizable {width} {height}>
 	<div class="clipping">
 		<CleverCrop {src} {width} {height} {focusRegion} alt="Cropping demo" />
-		{#if showOverlay}
+		{#if showOverlay && focusRegion}
 			<div
 				class="focus-overlay" inert
 				style:left={toPercent(focusRegion.left)}
