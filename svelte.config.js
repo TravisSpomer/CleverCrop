@@ -1,7 +1,7 @@
 import sveltePreprocess from "svelte-preprocess"
-import adapterAzure from "svelte-adapter-azure-swa"
+import adapter from "@sveltejs/adapter-auto"
 
-/** @type {import('@sveltejs/kit').Config} */
+/** @type {import("@sveltejs/kit").Config} */
 export default {
 
 	preprocess: [
@@ -9,7 +9,7 @@ export default {
 	],
 
 	kit: {
-		adapter: adapterAzure(),
+		adapter: adapter(),
 		paths: {
 			base: process.env.BASE_URL || "",
 		},
