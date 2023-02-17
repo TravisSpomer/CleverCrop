@@ -1,10 +1,7 @@
 <script lang="ts">
 	import "../app.scss"
-	import NavBar from "$lib/components/NavBar.svelte"
 	import Year from "$lib/components/Year.svelte"
 </script>
-
-<NavBar />
 
 <main id="top">
 <div class="content">
@@ -14,6 +11,6 @@
 
 <footer>
 <p>
-	&copy; <Year from={2023} /> Travis Spomer.
+	&copy; <Year from={2023} /> Travis Spomer. <a href="https://github.com/TravisSpomer/CleverCrop" target="_blank" rel="noreferrer">GitHub</a>
 </p>
 </footer>
