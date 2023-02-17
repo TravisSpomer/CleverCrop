@@ -1,7 +1,7 @@
 {
-	"name": "SvelteKitTemplate",
-	"short_name": "SvelteKitTemplate",
-	"description": "(description of SvelteKitTemplate)",
+	"name": "Clever cropping",
+	"short_name": "Clever cropping",
+	"description": "Clever cropping",
 	"start_url": ".",
 	"display": "minimal-ui",
 	"background_color": "#ffffff",
